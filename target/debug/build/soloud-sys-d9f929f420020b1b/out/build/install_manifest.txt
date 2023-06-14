@@ -1,1 +1,0 @@
-C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/lib/soloud.lib

@@ -1,4 +1,0 @@
-C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/build/CMakeFiles/soloud.dir
-C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/build/CMakeFiles/INSTALL.dir
-C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/build/CMakeFiles/ALL_BUILD.dir
-C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/build/CMakeFiles/ZERO_CHECK.dir
