@@ -8,15 +8,17 @@ use std::io;
 
 use std::thread;
 
-
+#[inline]
 fn wait(t:u64){
     sleep(Duration::from_secs(t));
 }
 
+#[inline]
 fn crd(){
     println!("--------------------");
 }
 
+#[inline]
 fn msc(){
     println!("##############################################");
 }
@@ -59,11 +61,25 @@ fn main() {
     wait(1);
     println!("Интересно......");
     wait(4);
+    println!("Хм... {name}...");
+    wait(3);
+    println!("{name}.....");
+    wait(6);
+    println!(".........{name}........");
+    wait(10);
+    println!("{name}...{name}...{name}...{name}...");
+    wait(15);
+    println!("Что-ж, {name}.");
+    wait(3);
+    println!("Ты овтетил, на интересующий мне вопрос...");
+    wait(4);
+    println!("Можем приступать...");
+    wait(2);
     crd();
     println!("???\n{name}! {name}!!!");
     crd();
     wait(2);
-    println!("Я проснулся, первое что увидели мои глаза - маму со злобным ебалом.");
+    println!("Я проснулся, первое что увидели мои глаза - маму с недовольной физиономией.");
     wait(4);
     crd();
     println!("Мама\n{name} опять до 4-х играл?!");
@@ -74,7 +90,7 @@ fn main() {
     crd();
     println!("Таинственный голос\nПохоже,");
     wait(1);
-    println!("вы столкнулись...");
+    println!("что настало время...");
     thread::spawn(|| {
         let sl = Soloud::default().unwrap();
         let mut wav = audio::Wav::default();
@@ -85,7 +101,7 @@ fn main() {
         }
     });
     wait(2);
-    println!("С ВЫБОРОМ!");
+    println!("ВЫБОРА!");
     wait(1);
     msc();
     println!("Ace Attorney OST - Pressing Pursuit ~ Cornered - Variation");
