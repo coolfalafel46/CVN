@@ -34,7 +34,9 @@ fn main() {
             std::thread::sleep(std::time::Duration::from_millis(100));
         }
     });
-
+    msc();
+    println!("Deltarune OST: 1 - ANOTHER HIM");
+    msc();
     crd();
     println!("Таинственный голос\nПривет.");
     wait(2);
