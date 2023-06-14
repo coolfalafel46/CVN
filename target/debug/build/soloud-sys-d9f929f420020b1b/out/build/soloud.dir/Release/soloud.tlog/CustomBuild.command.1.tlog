@@ -1,0 +1,10 @@
+^C:\USERS\КВК\.CARGO\REGISTRY\SRC\INDEX.CRATES.IO-6F17D22BBA15001F\SOLOUD-SYS-1.0.2\SYS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/квк/.cargo/registry/src/index.crates.io-6f17d22bba15001f/soloud-sys-1.0.2/sys "-BC:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/build" --check-stamp-file "C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

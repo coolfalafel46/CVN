@@ -1,0 +1,125 @@
+cargo:rerun-if-changed=build/android.rs
+cargo:rerun-if-changed=build/link.rs
+cargo:rerun-if-changed=build/main.rs
+cargo:rerun-if-changed=build/source.rs
+cargo:rerun-if-env-changed=CC
+cargo:rerun-if-env-changed=CXX
+cargo:rerun-if-env-changed=CFLAGS
+cargo:rerun-if-env-changed=CXXFLAGS
+cargo:rerun-if-changed=sys/CMakeLists.txt
+cargo:rerun-if-changed=sys/soloud_new.cpp
+cargo:rerun-if-changed=sys/soloud_derives.h
+cargo:rerun-if-changed=sys/soloud_derives.cpp
+CMAKE_TOOLCHAIN_FILE_x86_64-pc-windows-msvc = None
+CMAKE_TOOLCHAIN_FILE_x86_64_pc_windows_msvc = None
+HOST_CMAKE_TOOLCHAIN_FILE = None
+CMAKE_TOOLCHAIN_FILE = None
+CMAKE_GENERATOR_x86_64-pc-windows-msvc = None
+CMAKE_GENERATOR_x86_64_pc_windows_msvc = None
+HOST_CMAKE_GENERATOR = None
+CMAKE_GENERATOR = None
+CMAKE_PREFIX_PATH_x86_64-pc-windows-msvc = None
+CMAKE_PREFIX_PATH_x86_64_pc_windows_msvc = None
+HOST_CMAKE_PREFIX_PATH = None
+CMAKE_PREFIX_PATH = None
+CMAKE_x86_64-pc-windows-msvc = None
+CMAKE_x86_64_pc_windows_msvc = None
+HOST_CMAKE = None
+CMAKE = None
+running: "cmake" "C:\\Users\\ÐºÐ²Ðº\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\soloud-sys-1.0.2\\sys" "-G" "Visual Studio 17 2022" "-Thost=x64" "-Ax64" "-DWITH_MINIAUDIO=ON" "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" "-DCMAKE_INSTALL_PREFIX=C:\\Rusty Crabs\\Console_Visual_Novel\\target\\debug\\build\\soloud-sys-d9f929f420020b1b\\out" "-DCMAKE_C_FLAGS= -nologo -MD -Brepro" "-DCMAKE_C_FLAGS_RELEASE= -nologo -MD -Brepro" "-DCMAKE_CXX_FLAGS= -nologo -MD -Brepro" "-DCMAKE_CXX_FLAGS_RELEASE= -nologo -MD -Brepro" "-DCMAKE_ASM_FLAGS= -nologo -MD -Brepro" "-DCMAKE_ASM_FLAGS_RELEASE= -nologo -MD -Brepro" "-DCMAKE_BUILD_TYPE=Release"
+-- Selecting Windows SDK version 10.0.22000.0 to target Windows 10.0.19045.
+-- The C compiler identification is MSVC 19.36.32534.0
+-- The CXX compiler identification is MSVC 19.36.32534.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (13.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/build
+running: "cmake" "--build" "." "--target" "install" "--config" "Release" "--parallel" "12"
+MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/ª¢ª/.cargo/registry/src/index.crates.io-6f17d22bba15001f/soloud-sys-1.0.2/sys/CMakeLists.txt
+  soloud_new.cpp
+  soloud_derives.cpp
+  soloud_miniaudio.cpp
+  soloud_c.cpp
+  chipplayer.cpp
+  sndbuffer.cpp
+  sndchip.cpp
+  sndrender.cpp
+  soloud_ay.cpp
+  soloud_monotone.cpp
+  soloud_noise.cpp
+  soloud_openmpt.cpp
+  soloud_sfxr.cpp
+  darray.cpp
+  klatt.cpp
+  resonator.cpp
+  soloud_speech.cpp
+  tts.cpp
+  sid.cpp
+  soloud_tedsid.cpp
+  Generating Code...
+  Compiling...
+  ted.cpp
+  soloud_vic.cpp
+  soloud_vizsn.cpp
+  dr_impl.cpp
+  soloud_wav.cpp
+  soloud_wavstream.cpp
+  soloud.cpp
+  soloud_audiosource.cpp
+  soloud_bus.cpp
+  soloud_core_3d.cpp
+  soloud_core_basicops.cpp
+  soloud_core_faderops.cpp
+  soloud_core_filterops.cpp
+  soloud_core_getters.cpp
+  soloud_core_setters.cpp
+  soloud_core_voicegroup.cpp
+  soloud_core_voiceops.cpp
+  soloud_fader.cpp
+  soloud_fft.cpp
+  soloud_fft_lut.cpp
+  Generating Code...
+  Compiling...
+  soloud_file.cpp
+  soloud_filter.cpp
+  soloud_misc.cpp
+  soloud_queue.cpp
+  soloud_thread.cpp
+  soloud_bassboostfilter.cpp
+  soloud_biquadresonantfilter.cpp
+  soloud_dcremovalfilter.cpp
+  soloud_duckfilter.cpp
+  soloud_echofilter.cpp
+  soloud_eqfilter.cpp
+  soloud_fftfilter.cpp
+  soloud_flangerfilter.cpp
+  soloud_freeverbfilter.cpp
+  soloud_lofifilter.cpp
+  soloud_robotizefilter.cpp
+  soloud_waveshaperfilter.cpp
+  Generating Code...
+  soloud_openmpt_dll.c
+  stb_vorbis.c
+  Generating Code...
+  soloud.vcxproj -> C:\Rusty Crabs\Console_Visual_Novel\target\debug\build\soloud-sys-d9f929f420020b1b\out\lib\Release\soloud.lib
+  Building Custom Rule C:/Users/ª¢ª/.cargo/registry/src/index.crates.io-6f17d22bba15001f/soloud-sys-1.0.2/sys/CMakeLists.txt
+  1>
+  -- Install configuration: "Release"
+  -- Installing: C:/Rusty Crabs/Console_Visual_Novel/target/debug/build/soloud-sys-d9f929f420020b1b/out/lib/soloud.lib
+cargo:root=C:\Rusty Crabs\Console_Visual_Novel\target\debug\build\soloud-sys-d9f929f420020b1b\out
+cargo:rustc-link-search=native=C:\Rusty Crabs\Console_Visual_Novel\target\debug\build\soloud-sys-d9f929f420020b1b\out\build
+cargo:rustc-link-search=native=C:\Rusty Crabs\Console_Visual_Novel\target\debug\build\soloud-sys-d9f929f420020b1b\out\lib
+cargo:rustc-link-search=native=C:\Rusty Crabs\Console_Visual_Novel\target\debug\build\soloud-sys-d9f929f420020b1b\out\lib\Release
+cargo:rustc-link-lib=static=soloud

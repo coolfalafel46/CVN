@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Rusty Crabs\Console_Visual_Novel\target\debug\build\soloud-sys-d9f929f420020b1b\out\build\CMakeFiles\038b64b421607a9167865a37a950f6ea\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7E931B5B-017F-3412-A8A6-28BA23443EE6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
