@@ -7,19 +7,6 @@ use std::io;
 
 use sdl2::mixer::{InitFlag, AUDIO_S16LSB, DEFAULT_CHANNELS};
 
-fn sdl_init() {
-    let sdl = sdl2::init().unwrap();
-    let _audio = sdl.audio().unwrap();
-
-    let freq = 44_100;
-    let chunk_size = 1_024;
-
-    sdl2::mixer::open_audio(freq, AUDIO_S16LSB, DEFAULT_CHANNELS, chunk_size).unwrap();
-    let _mixer_context = sdl2::mixer::init(InitFlag::MP3);
-
-    sdl2::mixer::allocate_channels(4);
-}
-
 fn main() {
     let sdl = sdl2::init().unwrap();
     let _audio = sdl.audio().unwrap();
@@ -101,19 +88,15 @@ fn main() {
     println!("Напишите Английскую A = Сказать 'Да' и извиниться.");
     println!("Напишите Английскую B = Прогнать из комнаты.");
 
-
     loop{
-
         let mut FirstAnswer:String = String::new();
         io::stdin()
             .read_line(&mut FirstAnswer)
             .expect("ОШИБКА : Невозможно прочесть ответ...");
         let FirstAnswer = FirstAnswer.trim_end();
 
-
         if FirstAnswer == "A" {
             println!("Да мам, извини...");
-
         } else if FirstAnswer == "B" {
             println!("ПОШЛА ОТСЮДА ВОН! РАЗ У НАС СЕГОДНЯ ВЫХОДНОЙ... Я МОГУ ПОСПАТЬ ЕЩЁ ЧАС, И МНЕ ОБСАЛЮТНО НАСРАТЬ НА ТВОИ ЛЕКЦИИ, ПОНЯЛА?!");
             wait(2);
@@ -134,16 +117,10 @@ fn main() {
 }
 
 #[inline]
-fn wait(t:u64){
-    sleep(Duration::from_secs(t));
-}
+fn wait(t:u64) { sleep(Duration::from_secs(t)); }
 
 #[inline]
-fn crd(){
-    println!("--------------------");
-}
+fn crd(){ println!("--------------------"); }
 
 #[inline]
-fn msc(){
-    println!("##############################################");
-}
+fn msc(){ println!("##############################################"); }
