@@ -1,32 +1,42 @@
 #![allow(non_snake_case)]
 
 mod sound;
-pub use crate::sound::song2;
 
 use std::{time::Duration, thread::sleep};
-
 use std::io;
 
-use std::thread;
+use sdl2::mixer::{InitFlag, AUDIO_S16LSB, DEFAULT_CHANNELS};
 
-#[inline]
-fn wait(t:u64){
-    sleep(Duration::from_secs(t));
-}
+fn sdl_init() {
+    let sdl = sdl2::init().unwrap();
+    let _audio = sdl.audio().unwrap();
 
-#[inline]
-fn crd(){
-    println!("--------------------");
-}
+    let freq = 44_100;
+    let chunk_size = 1_024;
 
-#[inline]
-fn msc(){
-    println!("##############################################");
+    sdl2::mixer::open_audio(freq, AUDIO_S16LSB, DEFAULT_CHANNELS, chunk_size).unwrap();
+    let _mixer_context = sdl2::mixer::init(InitFlag::MP3);
+
+    sdl2::mixer::allocate_channels(4);
 }
 
 fn main() {
+    let sdl = sdl2::init().unwrap();
+    let _audio = sdl.audio().unwrap();
+
+    let freq = 44_100;
+    let chunk_size = 1_024;
+
+    sdl2::mixer::open_audio(freq, AUDIO_S16LSB, DEFAULT_CHANNELS, chunk_size).unwrap();
+    let _mixer_context = sdl2::mixer::init(InitFlag::MP3);
+
+    sdl2::mixer::allocate_channels(4);
+
+    let music = sdl2::mixer::Music::from_file("src/ANOTHER HIM.mp3").unwrap();
+    sdl2::mixer::Music::set_volume(64);
+
+    music.play(-1).unwrap();
     let mut name = String::new();
-    song2();
     msc();
     println!("Deltarune OST: 1 - ANOTHER HIM");
     msc();
@@ -52,14 +62,6 @@ fn main() {
     wait(1);
     println!("Интересно......");
     wait(4);
-    println!("Хм... {name}...");
-    wait(3);
-    println!("{name}.....");
-    wait(6);
-    println!(".........{name}........");
-    wait(10);
-    println!("{name}...{name}...{name}...{name}...");
-    wait(12);
     println!("Что-ж, {name}.");
     wait(3);
     println!("Ты овтетил, на интересующий мне вопрос...");
@@ -67,6 +69,7 @@ fn main() {
     println!("Можем приступать...");
     wait(2);
     crd();
+    sdl2::mixer::Music::pause();
     println!("???\n{name}! {name}!!!");
     crd();
     wait(2);
@@ -128,8 +131,19 @@ fn main() {
             println!("Это не ответ.");
         }
     }
-    
+}
 
+#[inline]
+fn wait(t:u64){
+    sleep(Duration::from_secs(t));
+}
 
+#[inline]
+fn crd(){
+    println!("--------------------");
+}
 
+#[inline]
+fn msc(){
+    println!("##############################################");
 }
