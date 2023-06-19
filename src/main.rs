@@ -1,6 +1,7 @@
 #![allow(non_snake_case)]
 
-use soloud::*;
+mod sound;
+pub use crate::sound::song2;
 
 use std::{time::Duration, thread::sleep};
 
@@ -25,17 +26,7 @@ fn msc(){
 
 fn main() {
     let mut name = String::new();
-
-
-    thread::spawn(|| {
-        let sl = Soloud::default().unwrap();
-        let mut wav = audio::Wav::default();
-        wav.load_mem(include_bytes!("ANOTHER HIM.mp3")).unwrap();
-        sl.play(&wav);
-        while sl.voice_count() > 0 {
-            std::thread::sleep(std::time::Duration::from_millis(100));
-        }
-    });
+    song2();
     msc();
     println!("Deltarune OST: 1 - ANOTHER HIM");
     msc();
@@ -51,7 +42,7 @@ fn main() {
 
     io::stdin()
         .read_line(&mut name)
-        .expect("ЙОУ! ЕСЛИ ТЫ ЭТО ВИДИШЬ - ТЫ ГОВНОКОДЕР ЕБАНЫЙ!");
+        .expect("ОШИБКА : Невозможно прочесть ответ...");
     let name = name.trim_end();
 
     crd();
@@ -68,7 +59,7 @@ fn main() {
     println!(".........{name}........");
     wait(10);
     println!("{name}...{name}...{name}...{name}...");
-    wait(15);
+    wait(12);
     println!("Что-ж, {name}.");
     wait(3);
     println!("Ты овтетил, на интересующий мне вопрос...");
@@ -91,21 +82,53 @@ fn main() {
     println!("Таинственный голос\nПохоже,");
     wait(1);
     println!("что настало время...");
-    thread::spawn(|| {
-        let sl = Soloud::default().unwrap();
-        let mut wav = audio::Wav::default();
-        wav.load_mem(include_bytes!("Pressing Pursuit.mp3")).unwrap();
-        sl.play(&wav);
-        while sl.voice_count() > 0 {
-            std::thread::sleep(std::time::Duration::from_millis(100));
-        }
-    });
     wait(2);
     println!("ВЫБОРА!");
     wait(1);
     msc();
     println!("Ace Attorney OST - Pressing Pursuit ~ Cornered - Variation");
     msc();
+    wait(2);
+    crd();
+    println!("Ваша кровь ускорилась, вы напряглись.");
+    wait(1);
+    println!("Раздумывая над ответами, вы решаете...");
+    wait(2);
+    crd();
+    println!("Напишите Английскую A = Сказать 'Да' и извиниться.");
+    println!("Напишите Английскую B = Прогнать из комнаты.");
+
+
+    loop{
+
+        let mut FirstAnswer:String = String::new();
+        io::stdin()
+            .read_line(&mut FirstAnswer)
+            .expect("ОШИБКА : Невозможно прочесть ответ...");
+        let FirstAnswer = FirstAnswer.trim_end();
+
+
+        if FirstAnswer == "A" {
+            println!("Да мам, извини...");
+
+        } else if FirstAnswer == "B" {
+            println!("ПОШЛА ОТСЮДА ВОН! РАЗ У НАС СЕГОДНЯ ВЫХОДНОЙ... Я МОГУ ПОСПАТЬ ЕЩЁ ЧАС, И МНЕ ОБСАЛЮТНО НАСРАТЬ НА ТВОИ ЛЕКЦИИ, ПОНЯЛА?!");
+            wait(2);
+            println!("После того как я осознал что я сказал... Было поздно.");
+            wait(3);
+            println!("Моя мама стояла передо мной с ошарашенным лицом.");
+            wait(2);
+            println!("Я забоялся, что она психанёт, отберёт у меня компьютер на месяц, накажет...");
+            wait(3);
+            println!("Но она тихо и медленно ушла, закрыв мою дверь.");
+            wait(2);
+            println!("Я успокоился...");
+            break;
+        } else {
+            println!("Это не ответ.");
+        }
+    }
+    
 
 
 
