@@ -11,3 +11,6 @@ edition = "2021"
 version = "0.35.2"
 default-features = false
 features = ["mixer"]
+
+[profile.release]
+opt-level="s"
