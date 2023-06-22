@@ -1,4 +1,3 @@
-
 #[cfg(windows)]
 extern crate winres;
 
@@ -11,4 +10,3 @@ fn main() {
 
 #[cfg(unix)]
 fn main() {}
-
