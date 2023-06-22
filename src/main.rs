@@ -21,7 +21,7 @@ fn main() {
     let projector = sdl2::mixer::Music::from_file("src/Projector.mp3").unwrap();
 
     wait(3);
-    projector.play(-1).unwrap();
+    projector.play(0).unwrap();
     println!("   ______                       __   ");
     println!("  / ____/___  ____  _________  / /__ ");
     println!(r" / /   / __ \/ __ \/ ___/ __ \/ / _ \");
