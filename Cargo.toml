@@ -14,3 +14,6 @@ features = ["mixer"]
 
 [profile.release]
 opt-level="s"
+
+[build-dependencies]
+winres = "0.1"

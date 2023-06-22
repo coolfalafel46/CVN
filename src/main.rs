@@ -112,15 +112,12 @@ fn main() {
     println!("Напишите Английскую A = Сказать 'Да' и извиниться.");
     println!("Напишите Английскую B = Прогнать из комнаты.");
 
-
     loop{
-
         let mut FirstAnswer:String = String::new();
         io::stdin()
             .read_line(&mut FirstAnswer)
             .expect("ОШИБКА : Невозможно прочесть ответ...");
         let FirstAnswer = FirstAnswer.trim_end();
-
 
         if FirstAnswer == "A" {
             println!("Да мам, извини...");
@@ -149,7 +146,6 @@ fn main() {
             println!("Моя мама фыркнула и ушла из комнаты захлопнув дверь.");
             wait(2);
             break;
-
         } else if FirstAnswer == "B" {
             crd();
             println!("{name}\nПОШЛА ТЫ! СЕГОДНЯ ВЫХОДНОЙ, ТАК ЧТО ЕСЛИ ТЫ ХОЧЕШЬ ЧТОБЫ Я СПАЛ, Я ПОСПЛЮ ТОЛЬКО ЕСЛИ НЕ БУДУ СЛУШАТЬ ТВОИ ЛЕКЦИИ, ПРОВАЛИВАЙ!");
@@ -197,16 +193,10 @@ fn main() {
 }
 
 #[inline]
-fn wait(t:u64){
-    sleep(Duration::from_secs(t));
-}
+fn wait(t:u64) { sleep(Duration::from_secs(t)); }
 
 #[inline]
-fn crd(){
-    println!("--------------------");
-}
+fn crd(){ println!("--------------------"); }
 
 #[inline]
-fn msc(){
-    println!("##############################################");
-}
+fn msc(){ println!("##############################################"); }
