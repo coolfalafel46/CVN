@@ -193,7 +193,7 @@ fn main() {
 }
 
 #[inline]
-fn wait(t:u64) { sleep(Duration::from_secs(t)); }
+fn wait(t:usize) { sleep(Duration::from_secs(t)); }
 
 #[inline]
 fn crd(){ println!("--------------------"); }
